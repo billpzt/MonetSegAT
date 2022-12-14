@@ -19,6 +19,8 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    var mlText = ""
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -43,8 +45,9 @@ class HomeFragment : Fragment() {
     private fun setupClickListeners() {
         binding.apply {
             homeFragmentBtnIncluir.setOnClickListener {
-                var anotacao = homeFragmentEtNote.text.toString()
-
+                val anotacao = homeFragmentEtNote.text.toString()
+                //mlText += "/n $anotacao"
+                homeFragmentMlText.text.append(anotacao)
             }
         }
     }
