@@ -10,9 +10,14 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <EditText
             android:id="@+id/home_fragment_et_note"
@@ -21,23 +26,35 @@
             android:layout_weight="4"
             android:ems="10"
             android:hint="Anotação"
-            android:inputType="textPersonName" />
+            android:inputType="textShortMessage"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="10dp" />
 
         <Button
             android:id="@+id/home_fragment_btn_incluir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:text="Incluir" />
+            android:text="Incluir"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="58dp" />
+
     </LinearLayout>
 
     <EditText
         android:id="@+id/home_fragment_ml_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

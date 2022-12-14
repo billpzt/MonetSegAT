@@ -1,16 +1,6 @@
 package com.infnet.devandroidat
 
-import android.R
-import android.content.Context
-import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.AdapterView.OnItemClickListener
-import android.widget.AdapterView.OnItemLongClickListener
-import android.widget.ArrayAdapter
-import android.widget.ListView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdRequest
@@ -42,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         MobileAds.initialize(this) {}
+
         mAdView = bindingActivity.adView
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)

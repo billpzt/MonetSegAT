@@ -46,8 +46,8 @@ class HomeFragment : Fragment() {
         binding.apply {
             homeFragmentBtnIncluir.setOnClickListener {
                 val anotacao = homeFragmentEtNote.text.toString()
-                //mlText += "/n $anotacao"
-                homeFragmentMlText.setText(anotacao)
+                mlText += "\n $anotacao"
+                homeFragmentMlText.setText(mlText).toString()
             }
         }
     }
