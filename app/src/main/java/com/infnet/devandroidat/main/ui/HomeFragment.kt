@@ -47,7 +47,7 @@ class HomeFragment : Fragment() {
             homeFragmentBtnIncluir.setOnClickListener {
                 val anotacao = homeFragmentEtNote.text.toString()
                 //mlText += "/n $anotacao"
-                homeFragmentMlText.text.append(anotacao)
+                homeFragmentMlText.setText(anotacao)
             }
         }
     }
